@@ -1,0 +1,23 @@
+body {
+    background-color: #eee;
+    margin-top: 4rem;    
+}
+.container {
+    background-color: #fff;    
+    max-width: 700px;
+    padding: 3rem 2rem;
+    text-align: center;
+    -webkit-box-shadow: 2px 6px 19px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 6px 19px -8px rgba(0,0,0,0.75);
+    box-shadow: 2px 6px 19px -8px rgba(0,0,0,0.75);
+}
+
+.btn-primary {
+    background-color: #28a745;
+    border: none;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #218036;
+}
