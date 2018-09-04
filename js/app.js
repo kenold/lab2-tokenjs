@@ -24,8 +24,16 @@ function displayTokens() {
     var cssCustom = '<link rel="stylesheet" href="css/style.css">';
 
     // document.write was overwriting the CSS so I had to re-include it here
-    document.write("<html><head><title>Token Results - Kenold Beauplan CTS2852C</title>" + 
+    document.write("<html><head><title>Generated Tokens - Kenold Beauplan CTS2852C</title>" + 
         cssBootstrap + cssCustom + "</head><body>");
+
+        var mainHeader = 
+            '<header class="main-header">' +
+            '<h1>Token Generator</h1>' +
+            '<p class="lead">This program generates tokens worth values of 20, 10, 5, 2 and 1.</p>' +
+            '</header>';
+
+        document.write(mainHeader);
 
         document.write('<div class="container">');
             // && (Number.isInteger(number))
@@ -33,7 +41,7 @@ function displayTokens() {
                 errorAlert('Only numbers are accepted! ');            
             } else if ((number > 20) && (number < 100)) {
 
-                document.write('<h1>You entered <span class="text-success">' + number + '</span>.</h1>');
+                document.write('<h4>Here are your generated tokens:</h4>');
                 
                 document.write('<ul class="list-group list-group-flush">');                
                 
@@ -63,10 +71,13 @@ function displayTokens() {
                     // Get ones
                     if (remainder >= 1) {
                         var numOfOnes = Math.floor(remainder / 1);
-                        document.write('<li class="list-group-item">' + numOfOnes + " x 1 tokens</li>");
+                        document.write('<li class="list-group-item">' + numOfOnes + " x 1 token</li>");
                     }
-                    document.write('<li class="list-group-item">make up a total of <strong>' + number + '</strong> tokens.</li>');
                 document.write('</ul>');
+                
+                document.write('<h4 class="mt-4">make up a total of <span class="badge badge-success">' 
+                    + number + '</span> tokens.</h4>');
+                
 
                 document.write('<br><button class="btn btn-primary" onClick="reloadPage()">Generate New Tokens</button>');
             } else {
