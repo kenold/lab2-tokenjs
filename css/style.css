@@ -18,7 +18,7 @@ body {
 .container {
     background-color: #fff;    
     max-width: 700px;
-    padding: 2rem 2rem;
+    padding: 1rem 2rem;
     text-align: center;
     -webkit-box-shadow: 2px 6px 19px -8px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 6px 19px -8px rgba(0,0,0,0.75);
