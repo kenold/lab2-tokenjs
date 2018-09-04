@@ -23,7 +23,7 @@ function displayTokens() {
     var cssBootstrap = '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">';
     var cssCustom = '<link rel="stylesheet" href="css/style.css">';
 
-    // document.write was overwriting the CSS so I had to re-include it here
+    // document.write was overwriting the content and CSS from index.htmlso I had to re-include it here
     document.write('<html><head><title>Generated Tokens - Kenold Beauplan CTS2852C</title>' + 
         cssBootstrap + cssCustom + '</head><body>');
 
