@@ -51,7 +51,7 @@ function displayTokens() {
                     // Get Twenties
                     var numOfTwenties = Math.floor(number / 20);
                     document.write('<li class="list-group-item">' + numOfTwenties + " x 20 tokens</li>");
-                    var remainder = number - numOfTwenties * 20;
+                    var remainder = number - (numOfTwenties * 20);
 
                     // Get Tens
                     if (remainder >= 10) {
