@@ -30,9 +30,8 @@ function displayTokens() {
         document.write('<div class="container">');
             // && (Number.isInteger(number))
             if (isNaN(number)) {
-                errorAlert('You did not enter a number. ');
-            }
-            else if ((number > 20) && (number < 100)) {
+                errorAlert('Only numbers are accepted! ');            
+            } else if ((number > 20) && (number < 100)) {
 
                 document.write('<h1>You entered <span class="text-success">' + number + '</span>.</h1>');
                 
@@ -40,33 +39,33 @@ function displayTokens() {
                 
                     // Get Twenties
                     var numOfTwenties = Math.floor(number / 20);
-                    document.write('<li class="list-group-item">' + numOfTwenties + " x 20 </li>");
+                    document.write('<li class="list-group-item">' + numOfTwenties + " x 20 tokens</li>");
                     var remainder = number - numOfTwenties * 20;
 
                     // Get Tens
                     if (remainder >= 10) {
                         var numOfTens = Math.floor(remainder / 10);
-                        document.write('<li class="list-group-item">' + numOfTens + " x 10 </li>");
+                        document.write('<li class="list-group-item">' + numOfTens + " x 10 tokens</li>");
                         remainder -= 10;
                     }
                     // Get fives
                     if (remainder >= 5) {
                         var numOfFives = Math.floor(remainder / 5);
-                        document.write('<li class="list-group-item">' + numOfFives + " x 5 </li>");
+                        document.write('<li class="list-group-item">' + numOfFives + " x 5 tokens</li>");
                         remainder -= 5;
                     }
                     // Get twos
                     if (remainder >= 2) {
                         var numOfTwos = Math.floor(remainder / 2);
-                        document.write('<li class="list-group-item">' + numOfTwos + " x 2 </li>");
+                        document.write('<li class="list-group-item">' + numOfTwos + " x 2 tokens</li>");
                         remainder -= 2;
                     }
                     // Get ones
                     if (remainder >= 1) {
                         var numOfOnes = Math.floor(remainder / 1);
-                        document.write('<li class="list-group-item">' + numOfOnes + " x 1 </li>");
+                        document.write('<li class="list-group-item">' + numOfOnes + " x 1 tokens</li>");
                     }
-                    document.write('<li class="list-group-item">makes up a total of <strong>' + number + '</strong>.</li>');
+                    document.write('<li class="list-group-item">makes up a total of <strong>' + number + '</strong> tokens.</li>');
                 document.write('</ul>');
 
                 document.write('<br><button class="btn btn-primary" onClick="reloadPage()">Generate New Tokens</button>');
@@ -75,12 +74,13 @@ function displayTokens() {
             } // end if
 
             function errorAlert(message='') {
+                //if (numberType = "" ) 
                 var errorMessage = 
                     '<div class="alert alert-danger mb-0" role="alert">' +
                         '<h4>ERROR!</h4>' +
                         '<p>' + message + 'Please enter a number between 20 and 100.</p>' +
                         '<hr>' +
-                        '<p>You entered <strong>' + number + "</strong>.</p>" +
+                        '<p>You entered <strong>' + ((number == "") ? "nothing" : number) + "</strong>.</p>" +
                     '</div>';
                 document.write(errorMessage);
                 document.write('<br><button class="btn btn-primary" onClick="reloadPage()">Try again!</button>');
