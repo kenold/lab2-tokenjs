@@ -11,7 +11,7 @@ function displayTokens() {
             '</div>' +
         '</form>';
 
-    /* set number variable to form input value
+    /* store form input value in 'number' variable
         - formTokens is the form name
         - numberInput is the input name
     */
