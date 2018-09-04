@@ -24,7 +24,7 @@ function displayTokens() {
     var cssCustom = '<link rel="stylesheet" href="css/style.css">';
 
     // document.write was overwriting the content and CSS from index.htmlso I had to re-include it here
-    document.write('<html><head><title>Generated Tokens - Kenold Beauplan CTS2852C</title>' + 
+    document.write('<html><head><title>Generated Tokens - Kenold Beauplan Lab 2 / CTS2852C</title>' + 
         cssBootstrap + cssCustom + '</head><body>');
 
         var mainHeader = 
