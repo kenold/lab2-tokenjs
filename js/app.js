@@ -36,7 +36,7 @@ function displayTokens() {
 
                 document.write('<h1>You entered <span class="text-success">' + number + '</span>.</h1>');
                 
-                document.write('<ul class="list-group">');                
+                document.write('<ul class="list-group list-group-flush">');                
                 
                     // Get Twenties
                     var numOfTwenties = Math.floor(number / 20);
@@ -66,7 +66,7 @@ function displayTokens() {
                         var numOfOnes = Math.floor(remainder / 1);
                         document.write('<li class="list-group-item">' + numOfOnes + " x 1 </li>");
                     }
-
+                    document.write('<li class="list-group-item">makes up a total of <strong>' + number + '</strong>.</li>');
                 document.write('</ul>');
 
                 document.write('<br><button class="btn btn-primary" onClick="reloadPage()">Generate New Tokens</button>');
