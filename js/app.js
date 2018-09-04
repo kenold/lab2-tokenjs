@@ -16,9 +16,9 @@ function displayTokens() {
         - numberInput is the input name
     */
     var number = document.formTokens.numberInput.value;
-
-    //document.write(theForm);
-
+    var min = 20;
+    var max = 100;
+    
     // store Bootstrap CSS and custom css
     var cssBootstrap = '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">';
     var cssCustom = '<link rel="stylesheet" href="css/style.css">';
@@ -40,8 +40,8 @@ function displayTokens() {
             // check if number input is not an integer
             if (isNaN(number)) {
                 errorAlert('Only numbers are accepted! ');
-            // check if number input is between 20 and 100
-            } else if ((number > 20) && (number < 100)) {
+            // check if number input is between min=20 and max=100
+            } else if ((number > min) && (number < max)) {
 
                 document.write('<h1>You entered <span class="text-success">' + number + '</span>.</h1>' +
                     '<p>Here are your generated tokens:</p>');
