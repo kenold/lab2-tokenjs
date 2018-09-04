@@ -65,7 +65,7 @@ function displayTokens() {
                         var numOfOnes = Math.floor(remainder / 1);
                         document.write('<li class="list-group-item">' + numOfOnes + " x 1 tokens</li>");
                     }
-                    document.write('<li class="list-group-item">makes up a total of <strong>' + number + '</strong> tokens.</li>');
+                    document.write('<li class="list-group-item">make up a total of <strong>' + number + '</strong> tokens.</li>');
                 document.write('</ul>');
 
                 document.write('<br><button class="btn btn-primary" onClick="reloadPage()">Generate New Tokens</button>');
@@ -80,13 +80,16 @@ function displayTokens() {
                         '<h4>ERROR!</h4>' +
                         '<p>' + message + 'Please enter a number between 20 and 100.</p>' +
                         '<hr>' +
+                        // if user enters nothing, display "You entered nothing", else display the number.                        
                         '<p>You entered <strong>' + ((number == "") ? "nothing" : number) + "</strong>.</p>" +
                     '</div>';
                 document.write(errorMessage);
                 document.write('<br><button class="btn btn-primary" onClick="reloadPage()">Try again!</button>');
             }
+                        
+        document.write('</div>'); // close container div
 
-        document.write('<div>'); // close container div
+        document.write('<footer class="main-footer"><p>Created by Kenold Beauplan for CTS2852C</p></footer>');
 
     // added double slash to escape one slash 🤦‍
     document.write("<//body><//html>");
