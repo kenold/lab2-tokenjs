@@ -41,7 +41,8 @@ function displayTokens() {
                 errorAlert('Only numbers are accepted! ');            
             } else if ((number > 20) && (number < 100)) {
 
-                document.write('<h4>Here are your generated tokens:</h4>');
+                document.write('<h1>You entered <span class="text-success">' + number + '</span>.</h1>' +
+                    '<p>Here are your generated tokens:</p>');
                 
                 document.write('<ul class="list-group list-group-flush">');                
                 
