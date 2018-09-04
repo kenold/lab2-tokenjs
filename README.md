@@ -10,7 +10,7 @@ Token input, token results and error page screenshots
 ![Token Input Screenshot](/images/token-input.jpg "Token Input Screenshot")
 
 ### Token Results
-![Token Results Screenshot](/images/token-results "Token Results Sreenshot")
+![Token Results Screenshot](/images/token-results.jpg "Token Results Sreenshot")
 
 ### Error! Value not in range
 ![Error! Value not in range Screenshot](/images/input-not-in-range.jpg "Error! Value not in range Screenshot")
