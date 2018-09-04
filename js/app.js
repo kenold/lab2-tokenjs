@@ -36,9 +36,11 @@ function displayTokens() {
         document.write(mainHeader);
 
         document.write('<div class="container">');
-            // && (Number.isInteger(number))
+            
+            // check if number input is not an integer
             if (isNaN(number)) {
-                errorAlert('Only numbers are accepted! ');            
+                errorAlert('Only numbers are accepted! ');
+            // check if number input is between 20 and 100
             } else if ((number > 20) && (number < 100)) {
 
                 document.write('<h1>You entered <span class="text-success">' + number + '</span>.</h1>' +
@@ -85,8 +87,7 @@ function displayTokens() {
                 errorAlert();
             } // end if
 
-            function errorAlert(message='') {
-                //if (numberType = "" ) 
+            function errorAlert(message='') {                
                 var errorMessage = 
                     '<div class="alert alert-danger mb-0" role="alert">' +
                         '<h4>ERROR!</h4>' +
