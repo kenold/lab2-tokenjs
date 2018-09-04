@@ -21,3 +21,8 @@ body {
     color: #fff;
     background-color: #218036;
 }
+
+.main-footer {
+    margin-top: 4rem;
+    text-align: center;
+}
