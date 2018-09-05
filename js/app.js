@@ -35,19 +35,19 @@ function generateTokens() {
         if (remainder >= 10) {
             var numOfTens = Math.floor(remainder / 10);
             result += '<li class="list-group-item">' + numOfTens + ' x 10 tokens</li>';
-            remainder -= 10;
+            remainder -= (numOfTens * 10);
         }
         // Get fives
         if (remainder >= 5) {
             var numOfFives = Math.floor(remainder / 5);
             result += '<li class="list-group-item">' + numOfFives + ' x 5 tokens</li>';
-            remainder -= 5;
+            remainder -= (numOfFives * 5);
         }
         // Get twos
         if (remainder >= 2) {
             var numOfTwos = Math.floor(remainder / 2);
             result += '<li class="list-group-item">' + numOfTwos + ' x 2 tokens</li>';
-            remainder -= 2;
+            remainder -= (numOfTwos * 2);
         }
         // Get ones
         if (remainder >= 1) {
