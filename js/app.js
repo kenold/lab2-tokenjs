@@ -61,7 +61,10 @@ function generateTokens() {
         // clear out errorsPlaceholder div before displaying tokens
         document.getElementById("errorsPlaceholder").innerHTML = "";
 
-        // inject final 'result' in tokensPlaceholder div from index.html
+        // clear form input before displaying results
+        document.formTokens.numberInput.value = "";
+
+        // inject final 'result' in tokensPlaceholder div from index.html        
         document.getElementById("tokensPlaceholder").innerHTML = result;
 
     } else {
