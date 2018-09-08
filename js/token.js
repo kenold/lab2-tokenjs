@@ -35,31 +35,34 @@ function generateTokens() {
             'Here are your generated tokens:</p>';
 
         // Get Twenties
-        var numOfTwenties = Math.floor(number / 20);
+        // use parseInt to get whole number without decimal
+        var numOfTwenties = parseInt(number / 20);
         result += '<li>' + numOfTwenties + ' x 20 tokens</li>';
+
+        // substract total number of 20s from number
         remainder = number - (numOfTwenties * 20);
 
         // Get Tens
         if (remainder >= 10) {
-            var numOfTens = Math.floor(remainder / 10);
+            var numOfTens = parseInt(remainder / 10);
             result += '<li>' + numOfTens + ' x 10 tokens</li>';
             remainder -= (numOfTens * 10);
         }
         // Get fives
         if (remainder >= 5) {
-            var numOfFives = Math.floor(remainder / 5);
+            var numOfFives = parseInt(remainder / 5);
             result += '<li>' + numOfFives + ' x 5 tokens</li>';
             remainder -= (numOfFives * 5);
         }
         // Get twos
         if (remainder >= 2) {
-            var numOfTwos = Math.floor(remainder / 2);
+            var numOfTwos = parseInt(remainder / 2);
             result += '<li>' + numOfTwos + ' x 2 tokens</li>';
             remainder -= (numOfTwos * 2);
         }
         // Get ones
         if (remainder >= 1) {
-            var numOfOnes = Math.floor(remainder / 1);
+            var numOfOnes = parseInt(remainder / 1);
             result += '<li>' + numOfOnes + ' x 1 token</li>';
         }
 
