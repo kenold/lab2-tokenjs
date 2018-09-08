@@ -5,28 +5,28 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Tokens Generator - Kenold Beauplan Lab 2 / CTS2852C</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 	<header class="main-header">		
 		<h1>Token Generator</h1>
-		<p class="lead">This program generates tokens worth values of 20, 10, 5, 2 and 1.</p>		
+		<p>This program generates tokens worth values of 20, 10, 5, 2 and 1.</p>		
 	</header>
-	<main class="container">
+	<main class="main-content">
+
 		<form name="formTokens" onsubmit="return false">
 			<div class="form-group">
-				<label for="numberInput">Enter a number between 20 and 100</label>
-				<input type="text" name="numberInput" class="form-control form-control-lg">
+				<label for="numberInput">Enter a number between 20 and 100 (integer/whole numbers only): </label>
+				<input type="text" name="numberInput" class="form-input">
 			</div>
 			<div class="form-group">
-				<button class="btn btn-primary" type="submit" onclick="generateTokens()">Generate Tokens</button>
+				<button class="btn-generate" type="submit" onclick="generateTokens()">Generate Tokens</button>
 			</div>
 		</form>				
 
 		<!-- placeholder to display generated tokens list -->
-		<ul id="tokensPlaceholder" class="list-group list-group-flush"></ul>
+		<ul id="tokensPlaceholder" class="token-list"></ul>
 		
 		<!-- placeholder to display errors -->		
 		<div id="errorsPlaceholder"></div>
@@ -37,7 +37,7 @@
 		<p>Created by Kenold Beauplan for CTS2852C / Lab 2</p>
 	</footer>
 
-	<script src="js/app.js"></script>
+	<script src="js/token.js"></script>
 </body>
 
 </html>
