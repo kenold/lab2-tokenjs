@@ -22,8 +22,8 @@ function generateTokens() {
 
     // check if number is not (!) an integer
     if (!Number.isInteger(number)) {
-        // call the errorAlert() function and pass a string parameter
-        errorAlert('Only whole/integer numbers are accepted! ');
+        // call the errorAlert() function
+        errorAlert();
 
         // check if number is between min=20 and max=100
     } else if ((number > min) && (number < max)) {
@@ -85,10 +85,8 @@ function generateTokens() {
     function errorAlert(message = '') {
         var errorMessage =
             '<div class="error-alert">' +
-            '<h4 class="error">ERROR!</h4>' +
-            '<p>' + message + 'Please enter a number between 20 and 100. ' +
-            // if number fiedl is empty "", display "You entered nothing", else display the number.                        
-            '<br><br><span class="error">You entered <strong>' + ((number == "") ? "nothing" : rawNumber) + "</strong></span>.</p>" +
+            '<h4 class="error">ERROR! You entered an <strong>invalid number. ' + rawNumber + '</strong></span></h4>' +
+            '<p>Please enter a number between 20 and 100. ' +
             '</div>';
 
         // clear out tokensPlaceholder div before displaying error
