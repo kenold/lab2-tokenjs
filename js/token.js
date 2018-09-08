@@ -20,7 +20,7 @@ function generateTokens() {
     // variable to write to DOM
     var result;
 
-    // check if number i not (!) an integer
+    // check if number is not (!) an integer
     if (!Number.isInteger(number)) {
         // call the errorAlert() function and pass a string parameter
         errorAlert('Only whole/integer numbers are accepted! ');
