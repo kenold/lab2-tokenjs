@@ -26,7 +26,7 @@ function generateTokens() {
         errorAlert();
 
         // check if number is between min=20 and max=100
-    } else if ((number > min) && (number < max)) {
+    } else if ((number >= min) && (number <= max)) {
 
         /* store sentence in 'result' variable and 
            keep concatenating with result += below
